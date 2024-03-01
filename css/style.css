@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* LOGO */
+header{
+    display: flex; /*"flexibilidad", hace que se aproveche todo el espacio disponible en el contenedor y se pueda reubicar de manera personalizada con otros 
+                    elementos CSS, como justify-content, align-items, flex-direction, etc... NOTA: los elementos CSS que se mencionó previamente UNICAMENTE
+                    funcionarán si el elemento padre se le especificó que tenga Display: flex (como en este caso)*/
+
+    align-items: center; /*Todos los elementos que están en fila se alinearán en la misma posición, según el valor que le especifiques (en este caso, todos centrados)*/
+    justify-content: center; /*Especifica como estará distribuido los elementos hijos del padre de manera horizontal*/
+    
+    flex-direction: column; /*Alinea todo el contenido hijo en 2 direcciones: wrap(por defecto), o column(como columna, es decir, hacia abajo) RECOMIENDO SOLO USARLO PARA CARDS, o en este caso del ejercicio (arriba el logo, y abajo el input)*/
+    background-color: black;
+    padding: 10px 0;
+}
+
+header img{ /*Selecionamos IMG del header(header=elemento padre)*/
+    border-radius: 50%; /*Redondeamos la imagen con el border-radius, y el 50% lo redondea circularmente perfecto*/
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+header input::placeholder{ /*Seleccionamos el PLACEHOLDER del input (texto que se pre-visualiza en el campo de texto)*/
+    text-align: center; /*Centrar texto*/
+}
+
+
+/* Contenedor - Cards */
+
+.contenedor{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    flex-wrap: wrap; /*Especifica que, si no hay mas espacio de manera horizontal para las cards u otro elemento, se seguirá agregando en la parte de abajo*/
+    background-color: black;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify; /*Alinea el texto*/
+
+    margin: 30px 20px;    
+}
+
+.card-body{
+    text-align: center;
+}
